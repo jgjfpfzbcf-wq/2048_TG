@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>2048</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2048</h1>
+            <div class="scores">
+                <div class="score-box">
+                    <span class="label">СЧЁТ</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="score-box">
+                    <span class="label">РЕКОРД</span>
+                    <span id="best">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <button id="new-game">Новая игра</button>
+            <button id="undo">↶ Отменить</button>
+        </div>
+
+        <div id="grid" class="grid"></div>
+
+        <div id="game-over" class="overlay hidden">
+            <div class="overlay-content">
+                <h2 id="overlay-title">Игра окончена!</h2>
+                <p id="overlay-text">Ваш счёт: <span id="final-score">0</span></p>
+                <button id="restart">Играть снова</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
